@@ -1,0 +1,211 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext);
+
+body {
+    background-image: url('/Images/dimension.png');
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: repeat;
+    font-family: "Roboto", Verdana, Geneva, 'DejaVu Sans', sans-serif !important;
+
+    header {
+        h1 {
+            color: red;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .jumbotron {
+            h1 {
+                text-shadow: 1px 1px 2px #999;
+                color: Red !important;
+                text-transform: uppercase;
+            }
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 150%;
+        }
+    }
+
+    footer {
+        margin: 70px 0px 0px;
+        border-top: solid #efefef 1px;
+    }
+
+    .pin-container {
+        width: 90%;
+        max-width: 1200px;
+        min-width: 800px;
+        //background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        box-shadow: rgba(0,0,0,0.3) 0px 0px 10px;
+        padding: 20px;
+        margin: 50px auto;
+
+        .pins {
+            -webkit-column-count: 5;
+            -webkit-column-gap: 10px;
+            -webkit-column-fill: auto;
+            -moz-column-count: 5;
+            -moz-column-gap: 10px;
+            -moz-column-fill: auto;
+            column-count: 5;
+            column-gap: 15px;
+            column-fill: auto;
+
+            .pin {
+                display: inline-block;
+                background: #FEFEFE;
+                border: 2px solid #FAFAFA;
+                box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+                margin: 0 2px 15px;
+                -webkit-column-break-inside: avoid;
+                -moz-column-break-inside: avoid;
+                column-break-inside: avoid;
+                padding: 15px;
+                padding-bottom: 5px;
+                background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+                opacity: 1;
+                -webkit-transition: all .2s ease;
+                -moz-transition: all .2s ease;
+                -o-transition: all .2s ease;
+                transition: all .2s ease;
+
+                img {
+                    width: 100%;
+                    border-bottom: 1px solid #ccc;
+                    padding-bottom: 15px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font: 12px/18px Arial, sans-serif;
+                    color: #333;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 960px) {
+        .pins {
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+        }
+    }
+
+    @media (min-width: 1100px) {
+        .pins {
+            -webkit-column-count: 5;
+            -moz-column-count: 5;
+            column-count: 5;
+        }
+    }
+
+    .pins:hover .pin:not(:hover) {
+        opacity: 0.4;
+    }
+    /**** Isotope Filtering ****/
+    .isotope-item {
+        z-index: 2;
+    }
+
+    .isotope-hidden.isotope-item {
+        pointer-events: none;
+        z-index: 1;
+    }
+    /**** Isotope CSS3 transitions ****/
+    .isotope,
+    .isotope .isotope-item {
+        -webkit-transition-duration: 0.8s;
+        -moz-transition-duration: 0.8s;
+        -ms-transition-duration: 0.8s;
+        -o-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+    }
+
+    .isotope {
+        -webkit-transition-property: height, width;
+        -moz-transition-property: height, width;
+        -ms-transition-property: height, width;
+        -o-transition-property: height, width;
+        transition-property: height, width;
+    }
+
+        .isotope .isotope-item {
+            -webkit-transition-property: -webkit-transform, opacity;
+            -moz-transition-property: -moz-transform, opacity;
+            -ms-transition-property: -ms-transform, opacity;
+            -o-transition-property: -o-transform, opacity;
+            transition-property: transform, opacity;
+        }
+            /**** disabling Isotope CSS3 transitions ****/
+            .isotope.no-transition,
+            .isotope.no-transition .isotope-item,
+            .isotope .isotope-item.no-transition {
+                -webkit-transition-duration: 0s;
+                -moz-transition-duration: 0s;
+                -ms-transition-duration: 0s;
+                -o-transition-duration: 0s;
+                transition-duration: 0s;
+            }
+
+    .products {
+        border-radius: 10px;
+        padding: 0px 20px;
+        margin: 0 auto;
+
+        .product {
+            display: block;
+            float: left;
+            width: 240px;
+            height: 311px;
+            border: solid 1px #ccc;
+            margin: 10px 10px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+            padding: 0px;
+            box-shadow: rgba(0,0,0, 0.5) 0 0 10px;
+            border: 2px #efefef solid;
+            position: relative;
+            overflow: hidden;
+
+            .name {
+                background-color: rgba(0,0,0,0.2);
+                color: white;
+                display: block;
+                position: absolute;
+                padding: 3px 10px;
+                z-index: 11;
+                left: 0px;
+                bottom: 0px;
+            }
+
+            .sku {
+                background-color: rgba(0,0,0,0.7);
+                color: white;
+                display: block;
+                position: absolute;
+                padding: 10px 5px 3px 5px;
+                z-index: 11;
+                right: 8px;
+                border-right: 1px solid white;
+                border-bottom: 1px solid white;
+            }
+
+            .image-link {
+                float: left;
+                z-index: 10;
+                margin: 0px auto;
+
+                img {
+                    max-width: 340px;
+                    display: block;
+                    margin: 0px auto;
+                }
+            }
+        }
+    }
+}
